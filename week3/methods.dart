@@ -39,25 +39,17 @@ void controlUserMoney(int money, int minumumValue) {
 }
 
 int convertToDolar(int userMoney) {
-  return userMoney / 13;
+  return userMoney ~/ 13;
 }
 
 int convertToStandartDolar(int userMoney, {int dolarIndex = 14}) {
-  return userMoney / dolarIndex;
+  return userMoney ~/ dolarIndex;
 }
 
 int convertToEuro({required int userMoney, int dolarIndex = 14}) {
-  return userMoney / dolarIndex;
+  return userMoney ~/ dolarIndex;
 }
 
 String sayHello(String name) {
   return 'hello $name';
-}
-
-void controlUserMoney(int money) {
-  if (money > 0) {
-    print('parası var');
-  } else {
-    print('parası yok');
-  }
 }
